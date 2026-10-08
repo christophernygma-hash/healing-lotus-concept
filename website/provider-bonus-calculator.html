@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Provider Performance Bonus Calculator | Healing Lotus</title>
+<style>
+:root{--ink:#2b2528;--muted:#756b70;--paper:#fffdfa;--cream:#f7f1e9;--plum:#3b2637;--rose:#c94f67;--green:#34564e;--line:#e3d9cf;--danger:#8a2439}
+*{box-sizing:border-box}html{background:#ece7e1}body{margin:0;background:#ece7e1;color:var(--ink);font:15px/1.45 Arial,Helvetica,sans-serif}
+.top{position:sticky;top:0;z-index:20;background:rgba(255,253,250,.96);border-bottom:1px solid var(--line);padding:13px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{font:500 24px Georgia,serif;color:var(--plum);text-decoration:none}.brand small{display:block;font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:2px}.actions{display:flex;gap:8px;flex-wrap:wrap}.actions a,.actions button{border:0;text-decoration:none;cursor:pointer;border-radius:999px;padding:11px 15px;font-weight:800;font-size:12px;background:var(--plum);color:#fff}.actions .rose{background:var(--rose)}
+.shell{max-width:1180px;margin:24px auto;padding:0 18px}.hero{background:linear-gradient(135deg,var(--paper),var(--cream));border:1px solid var(--line);border-radius:16px;padding:28px 30px;margin-bottom:18px}.kicker{text-transform:uppercase;letter-spacing:.15em;font-size:10px;font-weight:800;color:var(--rose);margin-bottom:7px}.hero h1{font:500 42px/.98 Georgia,serif;color:var(--plum);margin:0 0 9px}.lead{margin:0;color:var(--muted);max-width:860px;font-size:15px}
+.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px}.panel h2{font:500 23px Georgia,serif;color:var(--plum);margin:0 0 14px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:12px;font-weight:800;color:var(--plum)}.field input,.field select{width:100%;padding:11px 12px;border:1px solid #d7cbc0;border-radius:9px;background:#fff;font-size:15px;color:var(--ink)}.field .hint{font-size:10.5px;color:var(--muted)}.wide{grid-column:1/-1}.divider{margin:18px 0 13px;border-top:1px solid var(--line);padding-top:15px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:16px}.kpi{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px}.kpi .value{font-size:23px;font-weight:800;color:var(--plum)}.kpi .label{font-size:10px;color:var(--muted);margin-top:2px}.scorebox{background:var(--plum);color:#fff;border-radius:14px;padding:18px;margin-bottom:14px}.scorebox .score{font-size:48px;font-weight:800;line-height:1}.scorebox .tier{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;opacity:.95;margin-top:6px}.scorebox .bonus{font-size:30px;font-weight:800;margin-top:13px}.scorebox .sub{font-size:11px;opacity:.82}.flag{padding:11px 12px;border-radius:9px;background:#f7f1e9;border:1px solid var(--line);margin:9px 0;font-size:12px}.flag.bad{background:#fae9ed;border-color:#e6b6c1;color:var(--danger)}.flag.good{background:#eaf2ef;border-color:#bfd0c9;color:var(--green)}.metric-table{width:100%;border-collapse:collapse;font-size:12px}.metric-table th{background:var(--plum);color:#fff;text-align:left;padding:8px 7px;font-size:9.5px;text-transform:uppercase;letter-spacing:.05em}.metric-table td{padding:8px 7px;border-bottom:1px solid var(--line);vertical-align:top}.metric-table tr:nth-child(even) td{background:#faf7f2}.good{color:var(--green);font-weight:800}.warn{color:#8a5b2f;font-weight:800}.bad{color:var(--danger);font-weight:800}.note{padding:11px 13px;background:#faf4ef;border-left:3px solid var(--rose);color:var(--muted);font-size:11px;border-radius:0 8px 8px 0;margin-top:14px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.hero h1{font-size:34px}.form-grid{grid-template-columns:1fr}.wide{grid-column:auto}.top{align-items:flex-start}.brand{font-size:21px}.actions{justify-content:flex-end}}@media print{.top{display:none}.shell{max-width:none;margin:0;padding:0}.hero,.panel{box-shadow:none}.grid{grid-template-columns:1fr}.hero{border-radius:0}}
+</style>
+</head>
+<body>
+<header class="top"><a class="brand" href="index.html">Healing Lotus<small>Head Spa · Massage · Performance System</small></a><div class="actions"><a href="provider-performance-bonus-proposal.html">View Proposal</a><button class="rose" onclick="window.print()">Print / Save PDF</button></div></header>
+<main class="shell">
+<section class="hero"><div class="kicker">Provider Performance Calculator</div><h1>What would this provider actually earn?</h1><p class="lead">Choose the role, enter the pay-period results, and the calculator scores performance against the proposed Healing Lotus targets. Every target and payout rate is editable because this is a pilot model, not engraved stone.</p></section>
+<div class="grid">
+<section class="panel"><h2>1. Provider & pay-period inputs</h2><div class="form-grid">
+<div class="field"><label for="provider">Provider name</label><input id="provider" value="Example Provider"></div>
+<div class="field"><label for="role">Provider role</label><select id="role"><option>Head Spa Specialist</option><option>Massage Therapist</option><option>Esthetician</option><option>Wellness / Stretch Provider</option></select></div>
+<div class="field"><label for="available">Available provider hours</label><input id="available" type="number" min="0" step=".1" value="60"><div class="hint">Hours the provider was scheduled / available.</div></div>
+<div class="field"><label for="serviceHours">Completed service hours</label><input id="serviceHours" type="number" min="0" step=".1" value="38"><div class="hint">Paid service time, excluding breaks/admin.</div></div>
+<div class="field"><label for="serviceRevenue">Service revenue</label><input id="serviceRevenue" type="number" min="0" step="1" value="5400"></div>
+<div class="field"><label for="guests">Completed guest visits</label><input id="guests" type="number" min="0" step="1" value="24"></div>
+<div class="wide divider"><b>Repeat guest behavior</b></div>
+<div class="field"><label for="rebook">Guests rebooked within 24 hours</label><input id="rebook" type="number" min="0" step="1" value="11"></div>
+<div class="field"><label for="eligible60">60-day eligible guests</label><input id="eligible60" type="number" min="0" step="1" value="40"><div class="hint">Guests old enough to reach the 60-day window.</div></div>
+<div class="field"><label for="ret60">Returned within 60 days</label><input id="ret60" type="number" min="0" step="1" value="22"></div>
+<div class="field"><label for="addons">Visits with an enhancement/add-on</label><input id="addons" type="number" min="0" step="1" value="6"></div>
+<div class="wide divider"><b>Retail & membership behavior</b></div>
+<div class="field"><label for="retail">Visits with a retail purchase</label><input id="retail" type="number" min="0" step="1" value="8"></div>
+<div class="field"><label for="memberRec">Membership/pass recommendations</label><input id="memberRec" type="number" min="0" step="1" value="22"></div>
+<div class="field"><label for="members">Membership/pass sales</label><input id="members" type="number" min="0" step="1" value="2"></div>
+<div class="field"><label for="rating">Average verified guest rating</label><input id="rating" type="number" min="0" max="5" step=".1" value="4.8"></div>
+<div class="wide divider"><b>Quality gates</b></div>
+<div class="field"><label for="audit">Quality / SOP audit score</label><input id="audit" type="number" min="0" max="100" step="1" value="95"><div class="hint">85% minimum eligibility; 90% target.</div></div>
+<div class="field"><label for="minHours">Minimum service hours for bonus</label><input id="minHours" type="number" min="0" step=".1" value="20"></div>
+<div class="field"><label for="attendance">Attendance & punctuality gate</label><select id="attendance"><option value="pass">Pass</option><option value="fail">Fail</option></select></div>
+<div class="field"><label for="complaint">Serious substantiated complaint / policy issue</label><select id="complaint"><option value="no">No</option><option value="yes">Yes</option></select></div>
+<div class="wide divider"><b>Bonus settings</b></div>
+<div class="field"><label for="rate85">85–89.9 score rate</label><input id="rate85" type="number" min="0" max="20" step=".05" value=".75"><div class="hint">% of service revenue.</div></div>
+<div class="field"><label for="rate90">90–99.9 score rate</label><input id="rate90" type="number" min="0" max="20" step=".05" value="1.25"></div>
+<div class="field"><label for="rate100">100–109.9 score rate</label><input id="rate100" type="number" min="0" max="20" step=".05" value="2"></div>
+<div class="field"><label for="rate110">110+ score rate</label><input id="rate110" type="number" min="0" max="20" step=".05" value="2.5"></div>
+<div class="field"><label for="bonusCap">Bonus cap per pay period</label><input id="bonusCap" type="number" min="0" step="1" value="500"></div>
+</div><div class="note">Membership/pass scoring blends recommendation behavior and conversion. That avoids pretending the provider controls the entire front-desk transaction.</div></section>
+
+<section class="panel"><h2>2. Result</h2><div class="scorebox"><div class="sub" id="providerLabel">Example Provider · Head Spa Specialist</div><div class="score" id="score">110.0</div><div class="tier" id="tier">Elite</div><div class="bonus" id="bonus">$135.00</div><div class="sub" id="bonusLine">2.50% of service revenue</div></div>
+<div class="kpis"><div class="kpi"><div class="value" id="utilKpi">63.3%</div><div class="label">Utilization</div></div><div class="kpi"><div class="value" id="revKpi">$142</div><div class="label">Revenue / service hour</div></div><div class="kpi"><div class="value" id="rebookKpi">45.8%</div><div class="label">24-hour rebook</div></div><div class="kpi"><div class="value" id="retKpi">55.0%</div><div class="label">60-day retention</div></div></div>
+<div id="eligibility"></div><table class="metric-table"><thead><tr><th>Metric</th><th>Actual</th><th>Target</th><th>Weight</th><th>Metric score</th></tr></thead><tbody id="metricBody"></tbody></table><div class="note" id="explanation"></div></section>
+</div></main>
+<script>
+const ROLE_DATA={
+"Head Spa Specialist":{weights:{util:20,rebook:20,retention:15,rev:15,enh:10,retail:7,mem:8,exp:5},targets:{util:60,rebook:45,retention:50,rev:90,enh:20,retail:15,mem:8,memrec:85,exp:4.7}},
+"Massage Therapist":{weights:{util:25,rebook:20,retention:15,rev:20,enh:10,retail:3,mem:2,exp:5},targets:{util:62,rebook:45,retention:50,rev:95,enh:15,retail:8,mem:6,memrec:85,exp:4.7}},
+"Esthetician":{weights:{util:15,rebook:23,retention:15,rev:15,enh:12,retail:10,mem:5,exp:5},targets:{util:58,rebook:50,retention:55,rev:100,enh:25,retail:18,mem:8,memrec:85,exp:4.7}},
+"Wellness / Stretch Provider":{weights:{util:20,rebook:20,retention:15,rev:20,enh:10,retail:2,mem:3,exp:10},targets:{util:60,rebook:45,retention:50,rev:90,enh:15,retail:8,mem:6,memrec:85,exp:4.7}}
+};
+const $=id=>document.getElementById(id),inputs=[...document.querySelectorAll('input,select')];inputs.forEach(e=>{e.addEventListener('input',calculate);e.addEventListener('change',calculate)});
+function n(id){return Number($(id).value)||0} function pct(v){return v.toFixed(1)+'%'} function money(v){return v.toLocaleString(undefined,{style:'currency',currency:'USD'})}
+function ratio(actual,target){return target>0?Math.min(120,Math.max(0,actual/target*100)):100}
+function target(v,type){return type==='$'?money(v):type==='rating'?v.toFixed(1)+'/5':v.toFixed(1)+'%'}
+function calculate(){
+const role=$('role').value,d=ROLE_DATA[role],w=d.weights,t=d.targets,avail=n('available'),hours=n('serviceHours'),rev=n('serviceRevenue'),guests=n('guests'),rebook=n('rebook'),eligible60=n('eligible60'),ret60=n('ret60'),addons=n('addons'),retail=n('retail'),memRec=n('memberRec'),members=n('members'),rating=n('rating');
+const actual={util:avail?hours/avail*100:0,rebook:guests?rebook/guests*100:0,retention:eligible60?ret60/eligible60*100:0,rev:hours?rev/hours:0,enh:guests?addons/guests*100:0,retail:guests?retail/guests*100:0,mem:guests?members/guests*100:0,memRec:guests?memRec/guests*100:0,exp:rating};
+const comp={util:ratio(actual.util,t.util),rebook:ratio(actual.rebook,t.rebook),retention:ratio(actual.retention,t.retention),rev:ratio(actual.rev,t.rev),enh:ratio(actual.enh,t.enh),retail:ratio(actual.retail,t.retail),mem:Math.min(120,Math.max(0,((actual.mem/t.mem*100)+(actual.memRec/t.memrec*100))/2)),exp:ratio(actual.exp,t.exp)};
+const score=Object.keys(w).reduce((s,k)=>s+comp[k]*w[k],0)/100;let tier='Developing',rate=0;if(score>=110){tier='Elite';rate=n('rate110')/100}else if(score>=100){tier='High Performer';rate=n('rate100')/100}else if(score>=90){tier='Solid';rate=n('rate90')/100}else if(score>=85){tier='Progressing';rate=n('rate85')/100}
+const fails=[];if(hours<n('minHours'))fails.push('Minimum service-hour requirement not met.');if(n('audit')<85)fails.push('Quality/SOP audit is below the 85% eligibility floor.');if($('attendance').value==='fail')fails.push('Attendance/punctuality gate failed.');if($('complaint').value==='yes')fails.push('Serious substantiated complaint/policy issue blocks the bonus.');const eligible=fails.length===0,raw=rev*rate,pay=Math.min(raw,n('bonusCap')),bonus=eligible?pay:0;
+$('providerLabel').textContent=$('provider').value.trim()+' · '+role;$('score').textContent=score.toFixed(1);$('tier').textContent=eligible?tier:'Bonus Blocked';$('bonus').textContent=money(bonus);$('bonusLine').textContent=eligible?(rate*100).toFixed(2)+'% of service revenue'+(raw>pay?' · capped':''):'$0 because an eligibility gate failed';$('utilKpi').textContent=pct(actual.util);$('revKpi').textContent=money(actual.rev);$('rebookKpi').textContent=pct(actual.rebook);$('retKpi').textContent=pct(actual.retention);
+const rows=[['Utilization','util','%',actual.util,t.util],['24-hour rebook','rebook','%',actual.rebook,t.rebook],['60-day retention','retention','%',actual.retention,t.retention],['Revenue / service hour','rev','$',actual.rev,t.rev],['Enhancement attachment','enh','%',actual.enh,t.enh],['Retail attachment','retail','%',actual.retail,t.retail],['Membership / pass','mem','%',actual.mem,t.mem],['Guest experience','exp','rating',actual.exp,t.exp]];
+$('metricBody').innerHTML=rows.map(r=>{const scoreR=comp[r[1]],cls=scoreR>=100?'good':scoreR>=85?'warn':'bad',av=r[2]==='$'?money(r[3]):r[2]==='rating'?r[3].toFixed(1)+'/5':pct(r[3]),tv=target(r[4],r[2]);return '<tr><td><b>'+r[0]+'</b></td><td>'+av+'</td><td>'+tv+'</td><td>'+w[r[1]]+'%</td><td class="'+cls+'">'+scoreR.toFixed(1)+'</td></tr>'}).join('');
+$('eligibility').innerHTML=fails.length?'<div class="flag bad"><b>Bonus not eligible.</b><br>'+fails.join('<br>')+'</div>':'<div class="flag good"><b>Bonus eligible.</b> All required operating gates are clear.</div>';
+let best=null;rows.forEach(r=>{const gap=(r[4]-r[3])/r[4];if(gap>0&&(!best||gap>best.gap))best={name:r[0],actual:r[3],target:r[4],type:r[2],gap}});$('explanation').innerHTML=best?'<b>Next coaching opportunity:</b> '+best.name+' is below target at '+target(best.actual,best.type)+' versus '+target(best.target,best.type)+'. Improving that metric would most directly lift the weighted score.':'<b>Score note:</b> metric scores are capped at 120 so one unusually strong metric cannot completely overpower the rest of the scorecard.';
+}
+calculate();
+</script></body></html>
