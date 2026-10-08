@@ -46,9 +46,172 @@ footer{background:var(--black);color:white;padding:46px 0 22px}.footer-top{displ
 @media(max-width:1050px){.nav{display:none}.menu{display:block}.header-right .btn-outline{display:none}.category-inner{grid-template-columns:1fr auto}.category-links{display:none}.hero-grid{grid-template-columns:1fr}.hero-copy{padding:85px 0 65px}.hero-media{min-height:560px;padding:0}.hero-media-main{inset:0}.hero-tag{left:18px}.perks-grid{grid-template-columns:1fr 1fr}.service-list{grid-template-columns:1fr}.feature{grid-template-columns:1fr}.feature-media{min-height:500px}.offer-inner{grid-template-columns:1fr}.offer-actions{text-align:left}.membership-grid,.visit-grid{grid-template-columns:1fr;gap:48px}.footer-top{grid-template-columns:1fr}}
 @media(max-width:650px){.container{width:calc(100% - 32px)}.utility .container{font-size:8px}.header-inner{min-height:72px}.brand{min-width:0}.brand-name{font-size:23px}.header-right .btn-dark{min-height:43px;padding:0 15px}.hero-copy{padding:75px 0 58px}.hero h1{font-size:68px}.hero-copy .lead{font-size:15px}.hero-media{min-height:455px}.hero-media-card{width:155px;height:185px;right:15px;bottom:20px;border-width:6px}.hero-tag{top:25px}.section{padding:78px 0}.perks-grid{grid-template-columns:1fr}.perk{min-height:220px}.perk h3{margin-top:46px}.dir-head{display:block}.dir-head .lead{margin-top:20px}.service-row{grid-template-columns:1fr;min-height:0}.service-time{justify-self:start}.feature-copy{padding:68px 26px}.feature-stats{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px}.g.large{grid-column:span 2;grid-row:auto}.membership-card{padding:31px}.membership-card h3{font-size:49px}.steps{grid-template-columns:1fr}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:7px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* ===================== TYPE / DETAIL QA PASS ===================== */
+body{font-size:17px}
+.container{width:min(1240px,calc(100% - 56px))}
+.section{padding:116px 0}
+
+/* Header */
+.header-inner{min-height:84px;gap:28px}
+.nav{gap:26px;font-size:12px;letter-spacing:.075em}
+.brand-name{font-size:28px}
+.brand-sub{font-size:10px;letter-spacing:.14em;margin-top:6px}
+.btn{min-height:52px;padding:0 24px;font-size:12px;letter-spacing:.075em}
+
+/* Hero: separate headline lines to prevent the serif from colliding */
+.hero-grid{min-height:720px}
+.hero-copy{padding:92px 6vw 96px 0}
+.hero-copy-inner{max-width:670px}
+.hero-kicker{font-size:12px;letter-spacing:.14em;margin-bottom:21px}
+.hero h1{font-size:clamp(72px,8.4vw,124px);line-height:.9;letter-spacing:-.04em;margin-bottom:30px}
+.hero h1 .hero-line-one,.hero h1 .hero-line-two{display:block;white-space:nowrap}
+.hero h1 .hero-line-two{margin-top:10px}
+.hero-copy .lead{font-size:18px;line-height:1.75;max-width:570px;margin-bottom:31px}
+.hero-note{font-size:12px;line-height:1.5;margin-top:24px}
+.hero-media{min-height:720px;padding:26px 0 26px 24px}
+.hero-media-main{inset:26px 0 26px 24px}
+.hero-media-card{width:250px;height:286px;right:30px;bottom:54px}
+.hero-tag{top:57px;font-size:11px;padding:14px 17px}
+
+/* Category rail */
+.category-inner{min-height:92px;gap:32px}
+.category-title{font-size:13px;letter-spacing:.12em}
+.category-links{gap:32px}
+.category-links a{font-size:13px;line-height:1.2}
+.category-cta{font-size:12px;letter-spacing:.075em}
+
+/* Why Healing Lotus / perks */
+.perks-head{margin-bottom:50px}
+.perks-head h2{max-width:780px}
+.perks-grid{grid-template-columns:repeat(4,1fr)}
+.perk{min-height:315px;padding:30px 28px}
+.perk-number{font-size:12px;letter-spacing:.11em}
+.perk h3{font-size:36px;line-height:1.02;margin:58px 0 14px}
+.perk p{font-size:15px;line-height:1.68;margin-bottom:22px}
+.perk a{font-size:11px;letter-spacing:.08em}
+
+/* Service directory */
+.dir-head{margin-bottom:43px}
+.dir-tabs{gap:7px;margin-bottom:32px}
+.dir-tabs a{padding:12px 17px;font-size:11.5px;letter-spacing:.065em}
+.service-row{min-height:175px;padding:28px 30px;gap:28px}
+.service-row h3{font-size:36px;line-height:.98}
+.service-row small{margin-top:8px;font-size:11px;letter-spacing:.11em}
+.service-row p{max-width:540px;margin-top:10px;font-size:15px;line-height:1.68}
+.service-time{font-size:13px}
+
+/* Featured head spa */
+.feature{grid-template-columns:1.06fr .94fr}
+.feature-copy{padding:92px clamp(44px,6vw,100px)}
+.feature-copy h2{font-size:clamp(54px,6vw,86px);line-height:.92;margin-bottom:23px}
+.feature-copy .lead{font-size:17px;line-height:1.78}
+.feature-stats{gap:0 28px;margin:31px 0 34px}
+.stat{font-size:14px;line-height:1.45}
+.feature-label{font-size:11px;padding:13px 16px}
+
+/* Offer strip */
+.offer-inner{gap:60px}
+.offer h2{font-size:clamp(50px,5.7vw,76px);line-height:.92}
+.offer-copy p{font-size:16px;line-height:1.72}
+.offer-actions small{font-size:12px;line-height:1.45}
+
+/* Membership */
+.membership-card-label{font-size:11px;letter-spacing:.13em}
+.membership-card h3{font-size:62px;line-height:.9}
+.membership-card p{font-size:15px;line-height:1.75}
+.benefits div{font-size:13px;line-height:1.45}
+
+/* First visit */
+.step-num{font-size:11px}
+.step h3{font-size:32px}
+.step p{font-size:15px;line-height:1.72}
+
+/* Gallery note + footer */
+.gallery-note{font-size:12px;line-height:1.55}
+.footer-links{font-size:11px}
+.footer-bottom{font-size:11px;line-height:1.5}
+
+/* Kill the tiny inline text styles that were hiding in sections */
+.offer-actions small{font-size:12px!important}
+
+@media(max-width:1050px){
+  .container{width:min(100% - 44px,1240px)}
+  .nav{display:none}
+  .header-inner{min-height:82px}
+  .header-right .btn-outline{display:none}
+  .perks-grid{grid-template-columns:repeat(2,1fr)}
+  .perk{min-height:290px}
+  .service-list{grid-template-columns:1fr}
+  .category-inner{grid-template-columns:1fr;min-height:0;padding:20px 0;gap:15px}
+  .category-links{justify-content:flex-start;flex-wrap:wrap}
+  .category-cta{justify-self:start}
+  .feature{grid-template-columns:1fr}
+  .feature-media{min-height:520px}
+  .membership-grid{grid-template-columns:1fr;gap:50px}
+  .visit-grid{grid-template-columns:1fr;gap:50px}
+}
+@media(max-width:700px){
+  body{font-size:16px}
+  .container{width:calc(100% - 32px)}
+  .section{padding:82px 0}
+  .header-inner{min-height:74px}
+  .brand-name{font-size:24px}
+  .brand-sub{font-size:9px;letter-spacing:.12em}
+  .header-right .btn-dark{min-height:46px;padding:0 17px;font-size:11px}
+
+  .hero-grid{grid-template-columns:1fr;min-height:0}
+  .hero-copy{padding:86px 0 48px}
+  .hero h1{font-size:clamp(58px,18vw,82px);line-height:.94;letter-spacing:-.035em}
+  .hero h1 .hero-line-two{margin-top:9px}
+  .hero h1 .hero-line-one,.hero h1 .hero-line-two{white-space:normal}
+  .hero-copy .lead{font-size:16px}
+  .hero-media{min-height:520px;padding:0}
+  .hero-media-main{inset:0}
+  .hero-media-card{display:none}
+  .hero-tag{left:14px;top:18px;writing-mode:horizontal-tb}
+  .hero-note{font-size:11px}
+
+  .category-title{font-size:12px}
+  .category-links{gap:12px 18px}
+  .category-links a{font-size:12px}
+  .category-cta{font-size:11px}
+
+  .perks-grid{grid-template-columns:1fr}
+  .perk{min-height:0;padding:29px 24px}
+  .perk h3{font-size:34px;margin-top:38px}
+  .perk p{font-size:15px}
+
+  .dir-tabs{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}
+  .dir-tabs a{white-space:nowrap;font-size:11px}
+  .service-row{grid-template-columns:1fr;gap:12px;padding:25px 23px}
+  .service-row h3{font-size:34px}
+  .service-row p{font-size:14px}
+  .service-time{justify-self:start;font-size:12px}
+
+  .feature-media{min-height:410px}
+  .feature-copy{padding:68px 25px}
+  .feature-copy h2{font-size:clamp(50px,15vw,72px)}
+  .feature-stats{grid-template-columns:1fr;gap:0}
+  .stat{font-size:13px}
+
+  .offer-inner{grid-template-columns:1fr;gap:30px}
+  .offer-actions{text-align:left}
+
+  .membership-card{padding:32px}
+  .membership-card h3{font-size:52px}
+  .benefits{grid-template-columns:1fr}
+  .step h3{font-size:30px}
+  .step p{font-size:14px}
+
+  .footer-top{grid-template-columns:1fr}
+  .footer-links{font-size:10.5px;gap:14px}
+}
+
 </style>
 </head>
 <body>
+<!-- Typography/detail QA revision: increased readable text sizes, fixed hero line spacing, and expanded navigation/section copy. -->
 <div class="utility"><div class="container"><span>Virginia Beach · Daily 9 AM–10 PM</span><a href="https://www.fresha.com/a/healing-lotus-head-spa-massage-virginia-beach-2704-virginia-beach-boulevard-em8l64a5" target="_blank" rel="noopener">Book your reset →</a></div></div>
 <header>
 <div class="header-inner container">
@@ -61,7 +224,7 @@ footer{background:var(--black);color:white;padding:46px 0 22px}.footer-top{displ
 </div>
 </header>
 <main id="top">
-<section class="hero"><div class="container hero-grid"><div class="hero-copy"><div class="hero-copy-inner"><div class="hero-kicker">Head Spa · Massage · Beauty</div><h1>Reset your day.<span class="soft">Nurture your soul.</span></h1><p class="lead">Healing Lotus Head Spa Massage brings scalp care, massage and beauty together in a private experience designed to help you slow down and leave feeling renewed.</p><div class="hero-actions"><a class="btn btn-pink" href="https://www.fresha.com/a/healing-lotus-head-spa-massage-virginia-beach-2704-virginia-beach-boulevard-em8l64a5" target="_blank" rel="noopener">Book Online</a><a class="btn btn-outline" href="#services">Explore Services</a></div><div class="hero-note">Nourish the Scalp, Nurture the Soul · 2704 Virginia Beach Blvd</div></div></div><div class="hero-media"><div class="hero-media-main"><img src="https://www.thrive4peakperformance.com/images/head-spa-hero.jpg" alt="Guest receiving a relaxing head spa treatment" fetchpriority="high"></div><div class="hero-media-card"><img src="https://classpass-res.cloudinary.com/image/upload/f_auto/q_auto/xqhh0j352x9shosa83wa.jpg" alt="Relaxing facial treatment" loading="lazy"></div><div class="hero-tag">Virginia Beach</div></div></div></section>
+<section class="hero"><div class="container hero-grid"><div class="hero-copy"><div class="hero-copy-inner"><div class="hero-kicker">Head Spa · Massage · Beauty</div><h1><span class="hero-line-one">Reset your day.</span><span class="soft hero-line-two">Nurture your soul.</span></h1><p class="lead">Healing Lotus Head Spa Massage brings scalp care, massage and beauty together in a private experience designed to help you slow down and leave feeling renewed.</p><div class="hero-actions"><a class="btn btn-pink" href="https://www.fresha.com/a/healing-lotus-head-spa-massage-virginia-beach-2704-virginia-beach-boulevard-em8l64a5" target="_blank" rel="noopener">Book Online</a><a class="btn btn-outline" href="#services">Explore Services</a></div><div class="hero-note">Nourish the Scalp, Nurture the Soul · 2704 Virginia Beach Blvd</div></div></div><div class="hero-media"><div class="hero-media-main"><img src="https://www.thrive4peakperformance.com/images/head-spa-hero.jpg" alt="Guest receiving a relaxing head spa treatment" fetchpriority="high"></div><div class="hero-media-card"><img src="https://classpass-res.cloudinary.com/image/upload/f_auto/q_auto/xqhh0j352x9shosa83wa.jpg" alt="Relaxing facial treatment" loading="lazy"></div><div class="hero-tag">Virginia Beach</div></div></div></section>
 <section class="category-bar"><div class="container category-inner"><span class="category-title">Find your experience</span><div class="category-links"><a href="#head-spa">Head Spa</a><a href="#services">Massage</a><a href="#services">Facial & Beauty</a><a href="#services">Packages</a></div><a class="category-cta" href="#first-visit">New here? Start here →</a></div></section>
 <section class="section perks"><div class="container"><div class="perks-head"><div><p class="eyebrow rose">Why Healing Lotus</p><h2>Your self-care routine,<br><span class="serif">done differently.</span></h2></div><p class="lead" style="max-width:350px">The experience should be just as easy to understand as it is easy to enjoy.</p></div><div class="perks-grid"><article class="perk"><div class="perk-number">01</div><h3>Signature<br>Head Spa</h3><p>Scalp care, warm water and intentional touch in the experience Healing Lotus is built around.</p><a href="#head-spa">Explore →</a></article><article class="perk"><div class="perk-number">02</div><h3>Massage &<br>Bodywork</h3><p>Relaxation, deep tissue, Swedish, aromatherapy, couples and pain-management options.</p><a href="#services">View services →</a></article><article class="perk"><div class="perk-number">03</div><h3>Membership &<br>Gift Cards</h3><p>Make regular care easier or give someone a reason to stop, breathe and reset.</p><a href="#membership">Discover →</a></article><article class="perk"><div class="perk-number">04</div><h3>Your First<br>Visit</h3><p>Know what to choose, what to expect and what happens next before you ever arrive.</p><a href="#first-visit">Get ready →</a></article></div></div></section>
 <section class="section directory" id="services"><div class="container"><div class="dir-head"><div><p class="eyebrow rose">Services</p><h2>Find the right<br><span class="serif">reset for you.</span></h2></div><p class="lead">Real Healing Lotus categories, reorganized for clarity without replacing the menu.</p></div><div class="dir-tabs"><a class="active" href="#services">All Services</a><a href="#head-spa">Head Spa</a><a href="#services">Massage</a><a href="#services">Facial & Beauty</a><a href="#services">Packages</a></div><div class="service-list"><article class="service-row"><div><h3>Head Spa</h3><small>Scalp & Head Therapy</small><p>Basic, Premium, Luxury and Super Scalp treatments plus signature head spa packages.</p></div><div class="service-time">45–120 min</div></article><article class="service-row"><div><h3>Massage</h3><small>Body & Wellness</small><p>Relaxation, deep tissue, Swedish, aromatherapy, couples and pain-management sessions.</p></div><div class="service-time">30–120 min</div></article><article class="service-row"><div><h3>Facial & Beauty</h3><small>Beauty Care</small><p>Honey facial massage, aroma facial massage and gua sha facial massage experiences.</p></div><div class="service-time">Varies</div></article><article class="service-row"><div><h3>Packages</h3><small>Curated Experiences</small><p>Ladies relaxation, couple's anniversary, gentleman's vacation and steam experiences.</p></div><div class="service-time">Varies</div></article></div></div></section>
